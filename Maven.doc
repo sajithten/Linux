@@ -19,6 +19,42 @@ to know version installed
  /opt/apache-maven-3.8.7/bin/mvn --version
  
  To avoid this path we need to create enivornment variable (temporary method)
+ ----------------------------------------------------------------------------
  
+ in /opt
+ 
+ export MAVEN_HOME=/opt/apache-maven-3.8.7
+ 
+ export PATH=$PATH:$MAVEN_HOME/bin
+ 
+ mvn --version
+ 
+ To set enivornment variable  for root user (permenant method)
+ ----------------------------------------------------------------------------
+ 
+ find / -name .bashrc
+ 
+ vi /root/.bashrc
+ 
+ add same entries:
+
+ export MAVEN_HOME=/opt/apache-maven-3.8.7
+ 
+ export PATH=$PATH:$MAVEN_HOME/bin
+
+source /root/.bashrc
+
+ To set enivornment variable  for all user (permenant method)
+ ----------------------------------------------------------------------------
+
+ vi /etc/profile.d/maven.sh
+ 
+ add:
+ 
+ export MAVEN_HOME=/opt/apache-maven-3.8.7
+ 
+ export PATH=$PATH:$MAVEN_HOME/bin
+ 
+ source /etc/profile.d/maven.sh
  
 
