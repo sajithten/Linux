@@ -1,0 +1,29 @@
+ Preq:
+ 
+sudo amazon-linux-extras install java-openjdk11
+
+Change to Java 11
+-----------------
+
+sudo update-alternatives --config java
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.8.0.63668.zip
+ 
+unzip sonarqube-9.8.0.63668.zip
+
+Need to change ownership of sonar
+
+cd /opt
+
+chown ec2-user:ec2-user sonarqube-9.8.0.63668 -R
+
+verify ownership by:
+
+getfacl sonarqube-9.8.0.63668
+
+Need to change user details in Sonar.sh
+----------------------------------------
+
+vi /opt/sonarqube-9.8.0.63668/bin/linux-x86-64/sonar.sh
+
+uncomment RUN_AS_USER=ec2-user
