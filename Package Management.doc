@@ -8,3 +8,10 @@ Distribution            Lowlevel tool                 High Level tool
 
 Debian                    dpkg                            apt-get
 Centos                    rpm                             yum
+
+# To install rpm file in rhel
+
+rpm -ivh <filename.rpm>
+i- install
+v- verbose, meaning it shows that and all getting installed
+h- human readable format
