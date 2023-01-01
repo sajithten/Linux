@@ -159,6 +159,10 @@ scp <filename> root@<ipaddress>:/home/
 
 rsync -avzhr sourcefolder/ root@<ipaddress>:/tmp/
 
+#To know bit of OS
+
+uname -a
+
 
 
 
