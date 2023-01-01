@@ -12,6 +12,10 @@ sudo yum install -y jdk-8u141-linux-x64.rpm
 
 sudo yum install java-1.8.0-openjdk-devel -y
 
+# To select multiple version of java
+
+sudo update-alternatives --config java
+
 
 Install in Debian
 =============================
@@ -21,3 +25,6 @@ sudo apt-get update
 sudo apt-get install openjdk-8-jdk
 
 sudo apt-get install openjdk-8-jdk-headless -y
+
+# To fix broken install
+sudo apt --fix-broken install
