@@ -1,0 +1,19 @@
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.5.3-linux-x86_64.tar.gz
+
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.5.3-linux-x86_64.tar.gz.sha512
+
+yum install perl-Digest-SHA -y
+
+shasum -a 512 -c elasticsearch-8.5.3-linux-x86_64.tar.gz.sha512
+
+vi /etc/elasticsearch/elasticsearch.yml
+--------------------------------------------------
+  network.host: 0.0.0.0
+  http.port: 9200
+  discovery.type: single-node
+  
+  service elasticsearch start
+  
+  service elasticsearch status
+  
+  ./bin/elasticsearch
