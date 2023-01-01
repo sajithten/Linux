@@ -57,4 +57,9 @@ source /root/.bashrc
  
  source /etc/profile.d/maven.sh
  
+ To run / Build
+ --------------
+ 
+ mvn clean package
+ 
 
