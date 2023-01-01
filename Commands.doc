@@ -23,6 +23,12 @@ find / -name ssh
 useradd <username>
 passwd <passwd>
 
+# To delete a user
+
+userdel <username>
+
+userdel -r <username> will delete with all directory
+
 # To enable password authentication for Ec2
 - Edit ssh config file.
 vi /etc/ssh/sshd_config
@@ -47,6 +53,18 @@ cat /etc/passwd | grep <username>
 
   # To remove a user to a group
  gpasswd -d <username> <groupname>
+
+ # To see users in a group
+
+id <groupname>
+
+getent group <groupname>
+
+cat /etc/group | grep <groupname>
+
+# To delete a group
+
+groupdel <groupname>
 
  # To add a user with pre-defined ID
  useradd <username> -u <ID>
@@ -89,3 +107,58 @@ chmod u+rwx,g+rwx,o+rwx file/folder
 - For remove other all
 
 chmod u+rwx,g+rwx,o-rwx file/folder
+
+# To know disk usage
+ df -hT
+
+du --help
+
+du -b /home/user
+
+# Install nginx on aws ec2
+
+ amazon-linux-extras install nginx1 -y
+
+service nginx start
+
+# To copy files from one machine to another
+
+1) Generate ssh keys in source machine
+ssh-keygen
+once generated public key will be in /root/.ssh/id_rsa.pub.
+
+2) copy the public key and in destination server got to
+
+/root/.ssh
+
+vi authorized_keys
+
+paste
+
+3) ssh <destination_server_username>@<destination_server_ip>
+
+===============================================================================
+second method
+
+sudo -i
+
+add passwd to user by passwd ubuntu
+
+goto vi /etc/ssh/sshd_config
+
+set passwordauthentication yes
+
+in source machine ssh-copy-id -i <location of public key> <username>@<ipaddress>
+
+
+# To copy file from remote to destination
+
+scp <filename> root@<ipaddress>:/home/
+
+# To remote sync
+
+rsync -avzhr sourcefolder/ root@<ipaddress>:/tmp/
+
+
+
+
