@@ -1,0 +1,8 @@
+As its a third party we'l install in /opt directory.so
+
+cd /opt
+
+wget https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
+
+tar xvf apache-maven-3.8.7-bin.tar.gz
+
