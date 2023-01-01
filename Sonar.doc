@@ -21,9 +21,11 @@ verify ownership by:
 
 getfacl sonarqube-9.8.0.63668
 
-Need to change user details in Sonar.sh
+Need to change user details in Sonar.sh (Old Version)
 ----------------------------------------
 
 vi /opt/sonarqube-9.8.0.63668/bin/linux-x86-64/sonar.sh
 
 uncomment RUN_AS_USER=ec2-user
+
+sh sonar.sh start
