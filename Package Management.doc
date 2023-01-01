@@ -1,0 +1,10 @@
+RHEL / Centos - rpm
+Debian - deb
+
+Upgrade & renewal of package - Lowlevel
+Packge1 & Pckge2 depends to install - High level
+
+Distribution            Lowlevel tool                 High Level tool
+
+Debian                    dpkg                            apt-get
+Centos                    rpm                             yum
