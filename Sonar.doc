@@ -29,3 +29,10 @@ vi /opt/sonarqube-9.8.0.63668/bin/linux-x86-64/sonar.sh
 uncomment RUN_AS_USER=ec2-user
 
 sh sonar.sh start
+
+
+Error message “max virtual memory areas vm.max_map_count [65530] is too low”
+------------------------------------------------------------------------------
+
+sysctl -w vm.max_map_count=524288
+sysctl -w fs.file-max=131072
