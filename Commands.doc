@@ -168,6 +168,10 @@ uname -a
 
 sudo hostnamectl set-hostname controller-machine
 
+# To know ports using
+---------------------
+netstat -plunt
+
 
 
 
