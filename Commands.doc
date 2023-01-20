@@ -163,6 +163,12 @@ rsync -avzhr sourcefolder/ root@<ipaddress>:/tmp/
 
 uname -a
 
+# To set name for server
+-----------------------
+
+sudo hostnamectl set-hostname controller-machine
+
+
 
 
 
