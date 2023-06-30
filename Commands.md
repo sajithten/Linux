@@ -176,67 +176,102 @@ netstat -plunt
 ```
 $ uname -o
 ```
-2.To know the CPU archit­ecture:
+## To know the CPU archit­ecture:
+```
 $ uname -m
+```
 
-3.To check the kernel version:
+## To check the kernel version:
+```
 $ uname -r
+```
 
-4.To get the OS name, release, version:
+## To get the OS name, release, version:
+```
 $ cat /etc/o­s-r­elease
+```
 
-5.To list the system hardware:
+## To list the system hardware:
+```
 $ lshw
+```
 
-6.To get the CPU details:
+## To get the CPU details:
+```
 $ lscpu
+```
 
-7.To check system memory:
+## To check system memory:
+```
 $ free -h or free -m
+```
 
-8.To check the virtual memory stats:
+## To check the virtual memory stats:
+```
 $ vmstat -S m
+```
 
-9.Free memory cache, dentries and inode (with root):
+## Free memory cache, dentries and inode (with root):
+```
 $ echo 3 > /proc/­sys­/vm­/dr­op_­caches
+```
 
-10.To print the process specific memory utiliz­ations:
+## To print the process specific memory utiliz­ations:
+```
 $ ps aux --sort­=-%mem
+```
 
-11.To search packages for instal­lation:
+## To search packages for instal­lation:
+```
 $ apt search <pa­ckage name>
 e.g.:
 $ apt search python­-boto
+```
 
-12.To installed package:
+## To installed package:
+```
 $ sudo apt-get install <pa­ckage name>
+```
 
-14.To uninstall package:
+## To uninstall package:
+```
 $ sudo apt-get remove <pa­ckage name>
+```
 
-15.To list the mounted disk drives:
+## To list the mounted disk drives:
+```
 $ df -kh
+```
 
-16.To mount the volume:
+## To mount the volume:
+
 (create the directory first to mount volume)
+```
 $ mkdir -p <di­rectory path e..g /mount­-vo­l>
 $ sudo mount <src path> <above created dir path>
+```
 
-17.To list biggest files from directory (biggest 5):
+## To list biggest files from directory (biggest 5):
+```
 $ sudo du -a /dir/ | sort -n -r | head -n 5
+```
 
-18. Find the file (search for a file):
+##  Find the file (search for a file):
+```
 $ find <dir path> -name <fi­len­ame> -print
 e.g. to find app.log in /var directory
 $ find /var -name app.log –print`
+```
 
-19.Search the text string in a directory and print filename containing that string:
+## Search the text string in a directory and print filename containing that string:
+```
 $ find /var -type f -print | xargs grep <search test>
+```
 
-
-20.File the text string from a given directory:
+## File the text string from a given directory:
+```
 $ grep -rIn <search text> <di­rectory path>
-
+```
 
 
 
